@@ -1,4 +1,4 @@
-package domain;
+package com.spoonacular.Assignment_10.dto;
 
 public class MealPlanner {
 
