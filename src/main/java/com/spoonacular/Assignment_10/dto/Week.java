@@ -1,6 +1,7 @@
 package com.spoonacular.Assignment_10.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.spoonacular.Assignment_10.model.DayResponse;
 import lombok.Data;
 
 @Data

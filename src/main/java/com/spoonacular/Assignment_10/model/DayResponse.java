@@ -1,4 +1,4 @@
-package com.spoonacular.Assignment_10.dto;
+package com.spoonacular.Assignment_10.model;
 
 import com.spoonacular.Assignment_10.repository.Meals;
 import com.spoonacular.Assignment_10.repository.Nutrients;
