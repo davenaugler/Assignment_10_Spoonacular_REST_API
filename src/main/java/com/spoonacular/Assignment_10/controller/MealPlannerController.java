@@ -1,11 +1,6 @@
-package com.spoonacular.Assignment_10.web;
+package com.spoonacular.Assignment_10.controller;
 
-import com.spoonacular.Assignment_10.model.DayResponse;
-import com.spoonacular.Assignment_10.model.WeekResponse;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

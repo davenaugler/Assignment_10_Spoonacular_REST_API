@@ -23,7 +23,7 @@ public class APIUtil {
 
         ResponseEntity<DayResponse> response = rt.getForEntity(uri, DayResponse.class);
         System.out.println(response.getBody());
-        
+
     }
 
 }

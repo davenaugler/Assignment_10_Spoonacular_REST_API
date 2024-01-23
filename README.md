@@ -43,28 +43,26 @@ To build this Java application that integrates with the Spoonacular API for crea
 
 Here's an example structure:
 ```CSS
-src
-└── main
+    src
+    └── main
     ├── java
-    │   └── com
-    │       └── yourapp
-    │           ├── web
+    │   └── com.spoonacular
+    │       └── .Assignment_10
+    │           ├── controller
     │           │   └── MealPlannerController.java
-    │           ├── service
-    │           │   └── MealPlannerService.java
-    │           ├── model
-    │           │   ├── WeekResponse.java
-    │           │   └── DayResponse.java
+    │           ├── domain
+    │           │   └── Meals.java
+    │           │   └── Nutrients.java
     │           ├── dto
-    │           │   ├── MealPlanner.java
-    │           │   └── Week.java
-    │           ├── config
-    │           │   └── ApplicationProperties.java (not using)
+    │           │   ├── DayResponse.java
+    │           │   └── WeekResponse.java
+    │           ├── service
+    │           │   ├── MealPlannerService.java
     │           ├── utility
     │           │   └── APIUtil.java
     │           └── exception
     │               └── GlobalExceptionHandler.java
     └── resources
-        └── application.properties
+    └── application.properties
 
 ```
