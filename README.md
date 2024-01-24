@@ -1,68 +1,48 @@
-# Assignment_10_Spoonacular_REST_API
+# Assignment_10_Spoonacular_Rest_API
 
-## Needed package naming assistance 
+## Start App via
+1. Clone repo
+2. Run the app
+3. Navigate to `http://localhost:8080/mealplanner/day` and `http://localhost:8080/mealplanner/week` to see the daily and weekly options via Spoonacular's Rest API.
+   - Refresh browser to view other options
 
-To build this Java application that integrates with the Spoonacular API for creating daily or weekly meal plans, you will need to organize your project with several packages and classes. Here's a breakdown of how you might structure your application:
-
-1. **Controller Package:** This package will contain the controllers for your application.
-
-   - **MealPlannerController.java:** This class will handle the HTTP GET requests. It should have two methods, `getWeekMeals()` and `getDayMeals()`, annotated with `@GetMapping`. These methods will accept parameters like `numCalories`, `diet`, and `exclusions`, and return `ResponseEntity<WeekResponse>` and `ResponseEntity<DayResponse>` respectively.
-
- 
-2. **Service Package:** This package can contain the business logic.
-
-   -  **MealPlannerService.java:** This class should contain the logic for interacting with the Spoonacular API. It can have methods like `generateWeekMealPlan()` and `generateDayMealPlan()` which the controller will call. These methods will build the request to the Spoonacular API and handle the response.
-
-
-3. **Model Package:** This package will contain your data models.
-
-   - **WeekResponse.java** and **DayResponse.java:** These classes will represent the JSON response structure from the Spoonacular API. You should map the JSON fields to Java fields in these classes.
-
-
-4. Configuration Package: This package can be used to manage configuration.
-
-   - **ApplicationProperties.java:** This class can be annotated with `@ConfigurationProperties` to bind all the configuration properties, like the API base URL and endpoint paths.
+## Application Packages Contain
+- **Config Package:** This package manages Spoonacular configurations for the project
+- **Controller Package:** This package contains the controller for this application
+- **Domain Package:** This package contains the POJO's for the application
+- **DTOs (Data Transfer Objects):** DTO of the requests
+- **Model Package:** This package contains the data models for `DayResponse` and `WeekResponse`
+- **Service Package:** This package contains the business logic
+- **Assignment10Application:** Contains the static void main for the application
+- **application.properties:** Stores my Spoonacular API key and URL components here.
+- **Unit Test:** Contains Spoonacular API Unit Tests
+   - A work in progress.
 
 
-5. **Utility Package:** If needed, this can contain utility classes.
-
-   - **APIUtil.java:** A utility class for common API interaction tasks, such as building URLs with query parameters.
-
-
-6. **DTOs (Data Transfer Objects):** Optionally, you can create DTOs if the structure of the request or response differs significantly from your model classes.
-
-
-7. **Exception Handling:** Implement global exception handling using @ControllerAdvice to handle exceptions that might occur during API calls or other operations.
-
-
-8. **Integration Test Package:** This will contain your integration tests.
-   - **MealPlannerControllerIntegrationTest.java:** Write integration tests here to test your endpoints.
-
-
-9. **application.properties:** Store your API key and URL components here. Use these properties in your service class to build the API request URLs.
-
-Here's an example structure:
+## Structure for Spoonacular Rest API Application
 ```CSS
     src
     └── main
     ├── java
     │   └── com.spoonacular
     │       └── .Assignment_10
+    │           ├── config
+    │           │   └── RestTemplateConfig.java
+    │           │   └── SpoonacularProperties.java
     │           ├── controller
     │           │   └── MealPlannerController.java
     │           ├── domain
     │           │   └── Meals.java
     │           │   └── Nutrients.java
     │           ├── dto
-    │           │   ├── DayResponse.java
+    │           │   ├── Week.java
+    │           ├── model
+    │           │   └── DayResponse.java
     │           │   └── WeekResponse.java
     │           ├── service
     │           │   ├── MealPlannerService.java
-    │           ├── utility
-    │           │   └── APIUtil.java
-    │           └── exception
-    │               └── GlobalExceptionHandler.java
+    │       └── Assignment10Application.java
     └── resources
-    └── application.properties
+        └── application.properties
 
 ```
