@@ -1,4 +1,4 @@
-package com.spoonacular.Assignment_10.domain;
+package com.spoonacular.Assignment_10.dto;
 
 import lombok.Data;
 

@@ -9,8 +9,7 @@
 ## Application Packages Contain
 - **Config Package:** This package manages Spoonacular configurations for the project
 - **Controller Package:** This package contains the controller for this application
-- **Domain Package:** This package contains the POJO's for the application
-- **DTOs (Data Transfer Objects):** DTO of the requests
+- **DTOs (Data Transfer Objects):** DTO structures the data as well as POJO's for the app
 - **Model Package:** This package contains the data models for `DayResponse` and `WeekResponse`
 - **Service Package:** This package contains the business logic
 - **Assignment10Application:** Contains the static void main for the application
@@ -35,7 +34,9 @@
     │           │   └── Meals.java
     │           │   └── Nutrients.java
     │           ├── dto
-    │           │   ├── Week.java
+    │           │   └── Meals.java
+    │           │   └── Nutrients.java
+    │           │   └── Week.java
     │           ├── model
     │           │   └── DayResponse.java
     │           │   └── WeekResponse.java
