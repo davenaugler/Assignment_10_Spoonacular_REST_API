@@ -1,5 +1,12 @@
 # Assignment_10_Spoonacular_Rest_API
 
+## Get Spoonacular apiKey
+1. Go to https://spoonacular.com/food-api/console#Dashboard
+2. Create an account and grab a free apiKey
+3. Within `src/main/resources/application.properties` replace `add_your_apiKey_here` with your apiKey
+   - Thank you **Z** for reaching out and brining this to my attention. 
+
+    
 ## Start App via
 1. Clone repo
 2. Run the app
